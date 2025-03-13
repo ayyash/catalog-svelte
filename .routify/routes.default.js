@@ -41,7 +41,24 @@ export const routes = {
         "ext": "",
         "name": "posts"
       },
-      "children": []
+      "children": [
+        {
+          "meta": {
+            "isDefault": true
+          },
+          "id": "_default_posts_index_svelte",
+          "name": "index",
+          "file": {
+            "path": "src/routes/posts/index.svelte",
+            "dir": "src/routes/posts",
+            "base": "index.svelte",
+            "ext": ".svelte",
+            "name": "index"
+          },
+          "asyncModule": () => import('../src/routes/posts/index.svelte'),
+          "children": []
+        }
+      ]
     },
     {
       "meta": {},
