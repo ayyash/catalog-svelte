@@ -12,10 +12,14 @@ async function loadLocaleFile(locale) {
 
 loadLocaleFile('en');
 
+// this is how you pass global states!  but needs to be main.svelte.ts
+// const props = $state({ foo: 'bar' });
+// const app = mount(App, { target: document.getElementById("app"), props });
 
+// use hydrate for ssr? or not?
 const app = mount(App, {
-  target: document.body,
-})
+  target: document.querySelector('#app'),
+});
 
 export default app
 

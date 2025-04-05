@@ -13,7 +13,7 @@ export const res = (res: string, plural: boolean = false, count: number = 1, toc
   return tocase === 'sentence' ? toSentenceCase(value) : value;
 
 }
-export const t = (original: string, res: string, count: number | null= null, select: string | null = null): string => {
+export const translate = (original: string, res: string, count: number | null= null, select: string | null = null): string => {
 
   if (count !== null) {
       return Res.Plural(res, count, original);

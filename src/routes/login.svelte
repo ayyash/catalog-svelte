@@ -1,8 +1,10 @@
-
 <script lang="ts">
-	import { t } from '@/utils/resources';
-
-
-
+  import { translate } from '../utils/resources';
 </script>
-    {t('hello world', 'INVALID_TOOSHORT')}
+
+<div class="singlepage">
+  <div class="container">
+
+    {translate('hello world', 'INVALID_TOOSHORT')}
+  </div>
+</div>

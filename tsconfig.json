@@ -11,14 +11,6 @@
       "resolveJsonModule": true,
       "skipLibCheck": true,
       "sourceMap": true,
-      "paths": {
-        "@": [
-          "./src"
-        ],
-        "@/*": [
-          "./src/*"
-        ]
-      },
       "types": [
         "vitest/globals"
       ]
@@ -31,5 +23,5 @@
       ".routify/**.js",
       "test/**/*.ts",
       "test/**/*.js"
-    ]
+, "src/services/readme.md"    ]
   }

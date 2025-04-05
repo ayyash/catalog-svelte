@@ -40,7 +40,7 @@ const production = process.env.NODE_ENV === 'production';
 export default defineConfig({
   resolve: {
     alias: {
-      "@": process.cwd() + "/src",
+      // "@": process.cwd() + "/src",
       "shut": process.cwd() + "/node_modules/shut/src",
     },
   },
@@ -54,6 +54,12 @@ export default defineConfig({
     }),
     routify(),
   ],
+  build: {
+    outDir: '../host',
+    rollupOptions: {
+      external: (id) => id.endsWith('readme.md'), // Ignore .md files
+    },
+  },
   server: {
     port: 5200,
     hmr: false,

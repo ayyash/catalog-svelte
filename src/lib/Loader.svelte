@@ -1,21 +1,16 @@
 <script lang="ts">
-	import { _attn } from '$core/debug';
-	import { beforeNavigate, afterNavigate } from '$app/navigation';
+
+import { afterUrlChange, beforeUrlChange } from '@roxi/routify';
 
 	let loading = false;
-	afterNavigate((navigation) => {
-		loading = false;
-	});
-	beforeNavigate((navigation) => {
-		loading = true;
-	});
+	$afterUrlChange(() => (loading = false));
+	$beforeUrlChange(() => (loading = true));
 </script>
-
 {#if loading}
 	<div class="httploader">
-		<div class="line" />
-		<div class="subline inc" />
-		<div class="subline dec" />
+		<div class="line"></div>
+		<div class="subline inc"></div>
+		<div class="subline dec"></div>
 	</div>
 {/if}
 <style>
